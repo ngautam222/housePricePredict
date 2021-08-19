@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 data = pd.read_csv("/Users/nikhilgautam/Desktop/33/Real estate.csv",sep=',')
-#print(data.head())
+
 data = data[['X2 house age','X3 distance to the nearest MRT station','X4 number of convenience stores','Y house price of unit area']]
 
 predict = "Y house price of unit area"
@@ -20,3 +20,4 @@ predictions = model.predict(X_test)
 
 df = pd.DataFrame({'Actual':Y_test,'Predicted':predictions})
 print(df.head())
+#end
